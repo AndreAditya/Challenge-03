@@ -16,6 +16,9 @@ const AddTask = ({ onAddTask }) => {
     onAddTask(value);
     navigate("/");
   };
+  const goToMain = () => {
+    navigate("/");
+  };
 
   return (
     <>
@@ -39,7 +42,9 @@ const AddTask = ({ onAddTask }) => {
               <Button type="submit" className="custom-button">
                 Submit
               </Button>
-              <Button className="custom-button mt-4">Go Back</Button>
+              <Button onClick={goToMain} className="custom-button mt-4">
+                Go Back
+              </Button>
             </Form>
           </Col>
         </Row>
