@@ -1,7 +1,7 @@
 import { Container, Row } from "react-bootstrap";
 import { useState } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
-import SearchToDo from "../components/SearchToDo";
+import SearchTodo from "../components/SearchTodo";
 import TodoList from "../components/TodoList";
 import TodoFilter from "../components/TodoFilter";
 import todos from "../data/todos.json";
@@ -85,7 +85,7 @@ const MainPages = () => {
   return (
     <>
       <Container>
-        <SearchToDo filteredSearch={filteredSearch} />
+        <SearchTodo filteredSearch={filteredSearch} />
         <TodoFilter checkFilter={filterCheck} />
         {filteredData2.length === 0 ? (
           <p className="mt-5 text-center text-danger"> Data Kosong ! </p>
